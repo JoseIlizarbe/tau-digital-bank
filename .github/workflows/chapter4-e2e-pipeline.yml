@@ -66,6 +66,7 @@ jobs:
     needs: [build]
     runs-on: ubuntu-latest
     environment: UAT
+    concurrency: production
 
     steps: 
       - name: "cleanup destination at ${{ vars.UAT_IP }}"
